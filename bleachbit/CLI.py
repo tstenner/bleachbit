@@ -205,12 +205,14 @@ There is NO WARRANTY, to the extent permitted by law.""" % APP_VERSION
         preview_or_clean(operations, True)
         sys.exit(0)
     if options.gui:
-        import gtk
-        import GUI
-        shred_paths = args if options.shred else None
-        GUI.GUI(uac=not options.no_uac, shred_paths=shred_paths)
-        gtk.main()
-        sys.exit(0)
+        # TODO: GTK3
+        #from gi.repository import Gtk
+        #import GUI
+        #shred_paths = args if options.shred else None
+        #GUI.GUI(uac=not options.no_uac, shred_paths=shred_paths)
+        #Gtk.main()
+        #sys.exit(0)
+        print('Todo.')
     if options.shred:
         # delete arbitrary files without GUI
         # create a temporary cleaner object
